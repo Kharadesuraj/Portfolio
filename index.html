@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <link rel="icon" href="data:image/png;base64,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" type="image/icon type">
+</head>
+<body>
+
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"> <a href="#">Suraj<span>Kharade.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#teams" class="menu-btn">Team</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+            </ul> 
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--Home Section-->
+   
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello👋, my name is</div>
+                <div class="text-2">Suraj Kharade</div>
+                <div class="text-3">I am <span class="typing"></span></div>
+                <a href="#contact">Hire me</a>
+            </div>
+        </div>
+    </section>
+
+    <!--About Section-->
+    
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About Me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/sk1.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">I'm Suraj and I'm <span class="typing-2"></span></div>
+                    <p>As a web developer and  cyber-security enthusiast, I am passionate to explore myself in both development as well as security profession. Perform Vulnerability Assessment & Penetration Testing on Web, Mobile application, Network, Wireless Devices, Servers etc and then improving the lagging part with development skills. Perform application penetration testing and vulnerability assessments</p>
+                    <a href="#">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Service Section-->
+
+    <section class="services" id="services">
+        <div class="max-width">
+        <h2 class="title">My services</h2>
+        <div class="serv-content">
+        <div class="card">
+        <div class="box">
+        <i class="fas fa-paint-brush"></i>
+        <div class="text">Web Development</div>
+        </div>
+        </div>
+        <div class="card">
+        <div class="box">
+        <i class="fas fa-code"></i>
+        <div class="text">Coding Languages</div>
+        </div>
+        </div>
+        <div class="card">
+        <div class="box">
+        <i class="fas fa-mobile"></i>
+        <div class="text">Penetration Testing</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+     <!--Skill Section-->
+
+        <section class="skills" id="skills">
+            <div class="max-width">
+                <h2 class="title">My Skills</h2>
+                <div class="skills-content">
+                    <div class="column left">
+                        <div class="text">My creative skills & experiences.</div>
+                        <p></p>
+                        <a href="Certificatiion.html">My Certifications </a>
+                    </div>
+                    <div class="column right">
+                        <div class="bars">
+                            <div class="info">
+                                <span>Web Dev</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="line WebDev"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>C++</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="line Cpp"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>Web Testing</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="line WebTesting"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>TryHackMe</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="line TryHackMe"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+         <!--Team Section-->
+
+         <section class="teams" id="teams">
+             <div class="max-width">
+                 <h2 class="title">My Team</h2>
+                 <div class="carousel owl-carousel">
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/sk1.jpg" alt="">
+                            <div class="text">Suraj Kharade</div>
+                            <p>🔰 Developer | Security Researcher</p>
+                        </div>
+                    </div>
+   
+                    <div class="card">
+                       <div class="box">
+                           <img src="images/gore.jpg" alt="">
+                           <div class="text">Atharva Gore</div>
+                           <p>🔰 Mechanical Expert</p>
+                       </div>
+                   </div>
+   
+                   <div class="card">
+                       <div class="box">
+                           <img src="images/adarsh.jpeg" alt="">
+                           <div class="text">Adarsh Khandelwal</div>
+                           <p>🔰 Backend Developer</p>
+                       </div>
+                   </div>
+   
+                   <div class="card">
+                       <div class="box">
+                           <img src="images/ritvij.jpeg" alt="">
+                           <div class="text">Ritvij Naram</div>
+                           <p>🔰 Android Developer</p>
+                       </div>
+                   </div>
+   
+                   <div class="card">
+                       <div class="box">
+                           <img src="images/vivek.jpeg" alt="">
+                           <div class="text">Vivek Thakar</div>
+                            <p>🔰 Frontend Developer</p>
+                       </div>
+                   </div>
+   
+                   <div class="card">
+                       <div class="box">
+                           <img src="images/omkar.jpeg" alt="">
+                           <div class="text">Omkar Bhelke</div>
+                           <p>🔰 Frontend Developer</p>
+                       </div>
+                   </div>
+   
+                   <div class="card">
+                       <div class="box">
+                           <img src="images/sudhir.jpeg" alt="">
+                           <div class="text">Sudhir Arvatkal</div>
+                           <p>🔰 Real Estate</p>
+                       </div>
+                   </div>
+   
+                   <!--<div class="card">
+                       <div class="box">
+                           <img src="" alt="">
+                           <div class="text">Abhishek Bhalerao</div>
+                           <p>🔰 Marketing Head</p>
+                       </div>
+                   </div>-->
+                 </div>
+
+             </div>
+         </section>
+
+         <!--Contact Section-->
+
+         <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Get in Touch</div>
+                        <p>Contact me for consultation or to just say Hi 👉</p>
+
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Suraj Kharade</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Address</div>
+                                    <div class="sub-title">Pune, Maharashtra, India</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">suraj.kharade99@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column right">
+                        <div class="text">Message me</div>
+                        <form class="contact-form" autocomplete="off">
+                        <div class="fields">
+                        <div class="field name">
+                            <input type="text" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="field email">
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" id="message" placeholder="Message.." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" onclick="submitForm(event)">Send message</button>
+                        </div>
+                        </form>
+                        </div>
+                </div>
+            </div>                                                
+         </section>
+
+         <!--footer section-->
+
+         <footer>
+             <span>Created By <a href="#">Suraj Kharade</a> | <span class="far fa-copyright"> 2021 All rights reserved.</span></span>
+         </footer>
+         
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>     
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+    
+    
+  
+</body>
+</html>
